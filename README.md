@@ -13,8 +13,7 @@ desktop, and server-side Dart.
 
 Start with the [core package README](packages/spki_pinning/README.md) —
 it carries the full pitch, quickstarts, rotation playbook, and security
-model. The design spec and implementation plan live in
-[`docs/superpowers/`](docs/superpowers/).
+model.
 
 ## Development
 
