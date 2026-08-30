@@ -1,0 +1,11 @@
+{
+  "ca": "sha256/hJC+Hp10MsnzUyaaBq6T4hfLvCkYGVe/XaJMGdAqoJU=",
+  "ec_p256": "sha256/M0LHSs/c/jZVxJipLjWknz/g6rFVzBIIa4H7Egw15tk=",
+  "ec_p384": "sha256/I+1ZbDFOVwpCeMnROJm89EDe+wYFHGy1XmcVPkawwUU=",
+  "ed25519": "sha256/0xAxOyTLIj1gf5XP8Uvxl+KrgbByfj4hUN8thWw+q5c=",
+  "localhost_rsa2048": "sha256/v/WZhbei3MgEoVVs6PrZeQigqf15169NaElVHPrEHWo=",
+  "real_github": "sha256/rlkAiJEjAwr5USvccZ2NlLzz7elZETOabSnkRvKdow0=",
+  "rsa4096": "sha256/vIVojI+7dE8pDW6pZTMhZtmVeVZu+74o3pbG76qp+9s=",
+  "unpinned_ip": "sha256/2RzahUtOhxhd/BWtlwoZqHko/9J/kRc7gIKjWY4PlOk=",
+  "v1_rsa2048": "sha256/vEPIQpjM8nY108ekoZNGA4ieLe4Zg1PxW1h68gWwP+k="
+}
