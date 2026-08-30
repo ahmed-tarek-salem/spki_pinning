@@ -1,0 +1,24 @@
+name: ci
+on:
+  push:
+    branches: [main]
+  pull_request:
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        package: [spki_pinning, spki_pinning_http, spki_pinning_dio]
+    steps:
+      - uses: actions/checkout@v4
+      - uses: dart-lang/setup-dart@v1
+        with:
+          sdk: stable
+      - run: dart pub get
+        working-directory: packages/${{ matrix.package }}
+      - run: dart format --output=none --set-exit-if-changed .
+        working-directory: packages/${{ matrix.package }}
+      - run: dart analyze --fatal-infos
+        working-directory: packages/${{ matrix.package }}
+      - run: dart test
+        working-directory: packages/${{ matrix.package }}
