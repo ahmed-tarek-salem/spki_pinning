@@ -2,7 +2,7 @@
 
 Dio binding for [`spki_pinning`](https://pub.dev/packages/spki_pinning):
 true **SPKI (public-key) TLS pinning** that survives certificate renewal,
-fail-closed, with backup pins — as a drop-in `HttpClientAdapter`.
+fail-closed, with backup pins - as a drop-in `HttpClientAdapter`.
 
 ```dart
 import 'package:dio/dio.dart';
@@ -18,7 +18,7 @@ final dio = Dio()
 ```
 
 - Requests to pinned hosts are verified against the SPKI pin **during the
-  TLS handshake** — on mismatch nothing is ever sent, and you get a
+  TLS handshake** - on mismatch nothing is ever sent, and you get a
   `DioException` of type `badCertificate` wrapping a `SpkiPinningException`.
 - Requests to every other host go through a normal CA-validated adapter
   (injectable via `innerAdapter`).

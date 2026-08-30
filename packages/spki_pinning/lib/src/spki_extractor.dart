@@ -11,7 +11,7 @@ import 'exceptions.dart';
 //   length byte 0x81..0x84 -> the next 1..4 bytes hold the length,
 //                             big-endian (long form).
 //   length byte == 0x80    -> "indefinite length": legal in BER, illegal
-//                             in DER — always rejected here.
+//                             in DER - always rejected here.
 // A certificate is nested TLVs with a field order frozen by RFC 5280:
 //   Certificate ::= SEQUENCE {
 //     tbsCertificate ::= SEQUENCE {

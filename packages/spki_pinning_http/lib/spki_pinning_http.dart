@@ -16,10 +16,10 @@ const _redirectCodes = {301, 302, 303, 307, 308};
 /// pin-enforcing channel (checked during the TLS handshake, fail-closed);
 /// all other requests go through [inner] with normal CA validation.
 ///
-/// Redirects are followed manually so every hop is re-routed — a redirect
+/// Redirects are followed manually so every hop is re-routed - a redirect
 /// can never move a request across the pin boundary unchecked. Request
 /// bodies are buffered so 307/308 hops can retransmit them (streaming
-/// bodies are buffered too — the same trade-off OkHttp makes for
+/// bodies are buffered too - the same trade-off OkHttp makes for
 /// retriable bodies).
 class SpkiPinningClient extends http.BaseClient {
   SpkiPinningClient(

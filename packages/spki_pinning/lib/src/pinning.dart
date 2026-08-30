@@ -13,7 +13,7 @@ import 'spki_extractor.dart';
 /// fail-closed decision procedure applied during TLS handshakes.
 ///
 /// Host matching is exact and case-insensitive, and ignores the port (the
-/// same pins apply to 443 and 8443 — OkHttp semantics). A host with no
+/// same pins apply to 443 and 8443 - OkHttp semantics). A host with no
 /// pins is *rejected* by the pinned channel; routing bindings send such
 /// hosts through a normal CA-validated client instead.
 class SpkiPinning {
@@ -36,7 +36,7 @@ class SpkiPinning {
   final Map<String, List<SpkiPin>> _pinsByHost;
   final PinningObserver? _observer;
 
-  /// Most recent rejection per pinned host — bindings use this to enrich
+  /// Most recent rejection per pinned host - bindings use this to enrich
   /// the generic [HandshakeException] into a [SpkiPinningException].
   final Map<String, PinningEvent> _lastRejection = {};
 
@@ -59,7 +59,7 @@ class SpkiPinning {
         host: host,
         port: port,
         message: 'no pins configured for this host; the pinned client '
-            'refuses unpinned hosts — use a routing binding or add pins',
+            'refuses unpinned hosts - use a routing binding or add pins',
       ));
       return false;
     }

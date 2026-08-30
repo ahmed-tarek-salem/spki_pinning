@@ -1,6 +1,6 @@
 name: spki_pinning_dio
 description: >-
-  Dio binding for spki_pinning — a routing HttpClientAdapter with true SPKI
+  Dio binding for spki_pinning - a routing HttpClientAdapter with true SPKI
   (public-key) TLS pinning, fail-closed, with backup pins.
 version: 0.1.0
 repository: https://github.com/ahmed-tarek-salem/spki_pinning

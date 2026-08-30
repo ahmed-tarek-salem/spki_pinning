@@ -1,6 +1,6 @@
 name: spki_pinning_http
 description: >-
-  package:http binding for spki_pinning — a routing Client with true SPKI
+  package:http binding for spki_pinning - a routing Client with true SPKI
   (public-key) TLS pinning, fail-closed, with backup pins.
 version: 0.1.0
 repository: https://github.com/ahmed-tarek-salem/spki_pinning

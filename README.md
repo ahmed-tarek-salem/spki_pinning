@@ -1,6 +1,6 @@
 # spki_pinning (monorepo)
 
-True **SPKI (public-key) TLS pinning** for Dart & Flutter — survives
+True **SPKI (public-key) TLS pinning** for Dart & Flutter - survives
 certificate renewal, integrates with any HTTP client, fail-closed, with
 backup pins. Pure Dart: no platform channels, works on Android, iOS,
 desktop, and server-side Dart.
@@ -11,7 +11,7 @@ desktop, and server-side Dart.
 | [`packages/spki_pinning_dio`](packages/spki_pinning_dio) | Dio binding: routing `HttpClientAdapter` |
 | [`packages/spki_pinning_http`](packages/spki_pinning_http) | package:http binding: routing `Client` |
 
-Start with the [core package README](packages/spki_pinning/README.md) —
+Start with the [core package README](packages/spki_pinning/README.md) -
 it carries the full pitch, quickstarts, rotation playbook, and security
 model.
 

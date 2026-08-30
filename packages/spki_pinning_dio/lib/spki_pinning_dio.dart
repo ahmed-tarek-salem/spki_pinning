@@ -16,7 +16,7 @@ const _redirectCodes = {301, 302, 303, 307, 308};
 /// pin-enforcing channel (checked during the TLS handshake, fail-closed),
 /// everything else through [innerAdapter] with normal CA validation.
 ///
-/// Redirects are resolved inside this adapter so every hop is re-routed —
+/// Redirects are resolved inside this adapter so every hop is re-routed -
 /// a redirect can never move a request across the pin boundary unchecked.
 /// Request bodies are buffered so 307/308 hops can retransmit them.
 class SpkiPinningAdapter implements HttpClientAdapter {
@@ -79,7 +79,7 @@ class SpkiPinningAdapter implements HttpClientAdapter {
       );
       if (dropContentHeaders) {
         // copyWith re-applies the original contentType when the headers map
-        // has none — undo that for hops converted to GET.
+        // has none - undo that for hops converted to GET.
         hopOptions.headers.removeWhere((k, _) {
           final key = k.toLowerCase();
           return key == 'content-length' || key == 'content-type';

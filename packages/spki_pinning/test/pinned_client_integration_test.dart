@@ -29,7 +29,7 @@ void main() {
     return utf8.decodeStream(res);
   }
 
-  test('correct pin accepted — even self-signed (pin IS the trust anchor)',
+  test('correct pin accepted - even self-signed (pin IS the trust anchor)',
       () async {
     final p = SpkiPinning(pins: {
       'localhost': [correctPin],

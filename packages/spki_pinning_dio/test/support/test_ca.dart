@@ -3,7 +3,7 @@ import 'dart:io';
 /// Generates a fresh test CA and a CA-signed leaf for `127.0.0.1` at test
 /// time (via the system `openssl`). Freshly generated because platform
 /// verifiers (macOS SecTrust in particular) require server certs to have
-/// short validity (≤398 days) and a `serverAuth` EKU — committing such a
+/// short validity (≤398 days) and a `serverAuth` EKU - committing such a
 /// fixture would create an expiry time-bomb in the repo.
 class TestCa {
   TestCa._(this.dir);

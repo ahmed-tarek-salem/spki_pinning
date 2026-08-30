@@ -5,7 +5,7 @@ import 'spki_extractor.dart';
 
 /// Connects to [host]:[port], reads the leaf certificate presented during
 /// the handshake, and returns its `sha256/<b64>` SPKI pin. The handshake is
-/// deliberately aborted after the certificate is read — this is a
+/// deliberately aborted after the certificate is read - this is a
 /// measurement, not a trust decision, and no request is ever sent.
 ///
 /// The probe uses the same TLS channel the pinned `HttpClient` uses, which
@@ -23,7 +23,7 @@ Future<String> fetchPinOf(String host, int port,
     ..connectionTimeout = timeout
     ..badCertificateCallback = (cert, h, p) {
       observed = spkiPinOf(cert.der);
-      return false; // measurement only — never complete the connection
+      return false; // measurement only - never complete the connection
     };
   try {
     final request = await client

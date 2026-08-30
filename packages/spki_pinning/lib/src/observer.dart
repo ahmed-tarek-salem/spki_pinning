@@ -17,7 +17,7 @@ class PinningEvent {
   final int port;
 
   /// The `sha256/<b64>` pin of the certificate actually presented, when it
-  /// could be extracted. Useful during setup — but verify a pin out-of-band
+  /// could be extracted. Useful during setup - but verify a pin out-of-band
   /// before trusting one observed over the network.
   final String? observedPin;
 

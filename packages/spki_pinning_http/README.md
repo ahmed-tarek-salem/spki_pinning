@@ -3,7 +3,7 @@
 package:http binding for
 [`spki_pinning`](https://pub.dev/packages/spki_pinning): true **SPKI
 (public-key) TLS pinning** that survives certificate renewal, fail-closed,
-with backup pins — as a drop-in `http.Client`.
+with backup pins - as a drop-in `http.Client`.
 
 ```dart
 import 'package:spki_pinning_http/spki_pinning_http.dart';
@@ -17,7 +17,7 @@ final client = SpkiPinningClient(SpkiPinning(pins: {
 ```
 
 - Requests to pinned hosts are verified against the SPKI pin **during the
-  TLS handshake** — on mismatch nothing is ever sent, and you get a
+  TLS handshake** - on mismatch nothing is ever sent, and you get a
   `SpkiPinningException`.
 - Requests to every other host go through a normal CA-validated client
   (injectable via `inner`).

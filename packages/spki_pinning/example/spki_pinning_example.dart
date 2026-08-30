@@ -14,7 +14,7 @@ import 'package:spki_pinning/spki_pinning.dart';
 Future<void> main() async {
   const host = 'api.github.com';
 
-  // 1. Probe the current pin (demo only — verify out-of-band in production).
+  // 1. Probe the current pin (demo only - verify out-of-band in production).
   final pin = await fetchPinOf(host, 443);
   print('observed pin for $host: $pin');
 
@@ -29,7 +29,7 @@ Future<void> main() async {
   final req = await client.getUrl(Uri.https(host, '/zen'));
   final res = await req.close();
   print(
-      'pinned request: HTTP ${res.statusCode} — ${await utf8.decodeStream(res)}');
+      'pinned request: HTTP ${res.statusCode} - ${await utf8.decodeStream(res)}');
   client.close();
 
   // 3. Same request with a corrupted pin: rejected during the handshake,
