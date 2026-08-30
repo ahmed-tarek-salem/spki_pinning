@@ -3,4 +3,3 @@ build/
 pubspec.lock
 *.iml
 .DS_Store
-docs/superpowers/

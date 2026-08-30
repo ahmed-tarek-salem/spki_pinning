@@ -21,6 +21,3 @@ model.
 ./tool/generate_fixtures.sh          # regenerate TLS test fixtures
 cd packages/<pkg> && dart test       # per-package tests
 ```
-
-No git commits are made by automation in this repo; commits are always
-explicit and owner-driven.
