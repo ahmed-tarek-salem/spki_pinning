@@ -182,6 +182,36 @@ void main() {
     client.close();
   });
 
+  test('15. Cookie dropped on cross-host redirect', () async {
+    final target = plainServer.uri('127.0.0.1', '/echo-cookie').toString();
+    final client = clientWith([correctPin]);
+    final res = await client.get(
+        pinnedServer
+            .uri('localhost', '/redirect', {'code': '302', 'to': target}),
+        headers: {'cookie': 'session=abc'});
+    expect(res.body, 'none');
+    client.close();
+  });
+
+  test('16. Authorization dropped on https to http downgrade, same host',
+      () async {
+    final plain = await HttpServer.bind(InternetAddress.loopbackIPv4, 0);
+    plain.listen((req) {
+      req.response
+        ..write(req.headers.value('authorization') ?? 'none')
+        ..close();
+    });
+    final target = 'http://localhost:${plain.port}/echo-auth';
+    final client = clientWith([correctPin]);
+    final res = await client.get(
+        pinnedServer
+            .uri('localhost', '/redirect', {'code': '302', 'to': target}),
+        headers: {'authorization': 'Bearer x'});
+    expect(res.body, 'none');
+    client.close();
+    await plain.close(force: true);
+  });
+
   test('14. http:// URL passes through inner untouched', () async {
     final plain = await HttpServer.bind(InternetAddress.loopbackIPv4, 0);
     plain.listen((req) {

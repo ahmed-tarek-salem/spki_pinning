@@ -12,6 +12,15 @@ export 'package:spki_pinning/spki_pinning.dart';
 
 const _redirectCodes = {301, 302, 303, 307, 308};
 
+// Headers that must never travel across a host or scheme boundary on a
+// redirect. Mirrors dart:io's own non-redirect header list.
+const _sensitiveHeaders = {
+  'authorization',
+  'www-authenticate',
+  'cookie',
+  'cookie2',
+};
+
 /// A routing [http.Client]: requests to pinned hosts go through a
 /// pin-enforcing channel (checked during the TLS handshake, fail-closed);
 /// all other requests go through [inner] with normal CA validation.
@@ -89,8 +98,10 @@ class SpkiPinningClient extends http.BaseClient {
           return key == 'content-length' || key == 'content-type';
         });
       }
-      if (next.host.toLowerCase() != url.host.toLowerCase()) {
-        headers.removeWhere((k, _) => k.toLowerCase() == 'authorization');
+      if (next.host.toLowerCase() != url.host.toLowerCase() ||
+          next.scheme != url.scheme) {
+        headers
+            .removeWhere((k, _) => _sensitiveHeaders.contains(k.toLowerCase()));
       }
       url = next;
     }

@@ -41,6 +41,8 @@ class TlsTestServer {
         res.write('ok');
       case '/echo-auth':
         res.write(req.headers.value('authorization') ?? 'none');
+      case '/echo-cookie':
+        res.write(req.headers.value('cookie') ?? 'none');
       case '/echo-method':
         res.write(req.method);
       case '/redirect':
