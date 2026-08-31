@@ -1,9 +1,9 @@
 # spki_pinning (monorepo)
 
-True **SPKI (public-key) TLS pinning** for Dart & Flutter - survives
-certificate renewal, integrates with any HTTP client, fail-closed, with
-backup pins. Pure Dart: no platform channels, works on Android, iOS,
-desktop, and server-side Dart.
+True **SPKI (public-key) TLS certificate pinning** for Dart & Flutter,
+often called SSL pinning. Survives certificate renewal, integrates with any
+HTTP client, fail-closed, with backup pins. Pure Dart: no platform channels,
+works on Android, iOS, desktop, and server-side Dart.
 
 | Package | What it is |
 |---|---|

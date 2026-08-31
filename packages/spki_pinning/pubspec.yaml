@@ -1,9 +1,11 @@
 name: spki_pinning
 description: >-
-  True SPKI (public-key) TLS pinning for Dart & Flutter. Survives certificate
-  renewal, integrates with any HTTP client, fail-closed, with backup pins.
+  SSL/TLS certificate pinning that pins the SPKI public key, so pins survive
+  certificate renewal. Works with Dio, http, or HttpClient. Fail-closed, with
+  backup pins.
 version: 0.1.0
 repository: https://github.com/ahmed-tarek-salem/spki_pinning
+topics: [ssl-pinning, certificate-pinning, security, tls, network]
 environment:
   sdk: ">=3.4.0 <4.0.0"
 false_secrets:
