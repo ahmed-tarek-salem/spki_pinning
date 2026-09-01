@@ -1,0 +1,17 @@
+name: ssl_public_key_pinning
+description: >-
+  SSL/TLS certificate pinning that pins the SPKI public key, so pins survive
+  certificate renewal. Works with Dio, http, or HttpClient. Fail-closed, with
+  backup pins.
+version: 0.1.0
+repository: https://github.com/ahmed-tarek-salem/ssl_public_key_pinning
+topics: [ssl-pinning, certificate-pinning, security, tls, network]
+environment:
+  sdk: ">=3.4.0 <4.0.0"
+false_secrets:
+  - /test/fixtures/*.key.pem
+dependencies:
+  crypto: ^3.0.3
+dev_dependencies:
+  lints: ^4.0.0
+  test: ^1.25.0

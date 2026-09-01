@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 set -euo pipefail
 cd "$(dirname "$0")/.."
-FIX="packages/spki_pinning/test/fixtures"
+FIX="packages/ssl_public_key_pinning/test/fixtures"
 mkdir -p "$FIX"
 DAYS=36500
 

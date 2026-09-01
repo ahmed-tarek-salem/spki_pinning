@@ -8,7 +8,7 @@ jobs:
     runs-on: ubuntu-latest
     strategy:
       matrix:
-        package: [spki_pinning, spki_pinning_http, spki_pinning_dio]
+        package: [ssl_public_key_pinning, ssl_public_key_pinning_http, ssl_public_key_pinning_dio]
     steps:
       - uses: actions/checkout@v4
       - uses: dart-lang/setup-dart@v1

@@ -1,0 +1,17 @@
+name: ssl_public_key_pinning_dio
+description: >-
+  Dio binding for ssl_public_key_pinning: SSL/TLS certificate pinning of the SPKI
+  public key via a routing HttpClientAdapter. Fail-closed, with backup pins.
+version: 0.1.0
+repository: https://github.com/ahmed-tarek-salem/ssl_public_key_pinning
+topics: [ssl-pinning, certificate-pinning, security, tls, network]
+environment:
+  sdk: ">=3.4.0 <4.0.0"
+false_secrets:
+  - /test/fixtures/*.key.pem
+dependencies:
+  dio: ^5.4.0
+  ssl_public_key_pinning: ^0.1.0
+dev_dependencies:
+  lints: ^4.0.0
+  test: ^1.25.0

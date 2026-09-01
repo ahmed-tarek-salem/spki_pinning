@@ -1,0 +1,3 @@
+dependency_overrides:
+  ssl_public_key_pinning:
+    path: ../

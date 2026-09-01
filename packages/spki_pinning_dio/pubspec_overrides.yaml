@@ -1,3 +1,0 @@
-dependency_overrides:
-  spki_pinning:
-    path: ../spki_pinning
