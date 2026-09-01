@@ -11,10 +11,10 @@ jobs:
         package: [ssl_public_key_pinning, ssl_public_key_pinning_http, ssl_public_key_pinning_dio]
     steps:
       - uses: actions/checkout@v4
-      - uses: dart-lang/setup-dart@v1
+      - uses: subosito/flutter-action@v2
         with:
-          sdk: stable
-      - run: dart pub get --no-example
+          channel: stable
+      - run: flutter pub get
         working-directory: packages/${{ matrix.package }}
       - run: dart format --output=none --set-exit-if-changed .
         working-directory: packages/${{ matrix.package }}
